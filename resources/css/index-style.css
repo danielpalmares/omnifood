@@ -6,7 +6,7 @@
 
 html {
     background-color: #fff;
-    color: rgb(70, 68, 68);
+    color: rgb(119, 119, 119);
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -16,4 +16,29 @@ html {
 .row {
     max-width: 1140px;
     margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    /* para mostrar toda a imagem */
+    height: 100vh;
+    /* 100% da viewport */
+    background-position: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    /* basicamente neste caso vai fazer o texto ficar em linha, no limite do tamanho da página */
+    top: 50%;
+    /* posicionando como elemento absoluto, 50% de distância do topo até o texto */
+    left: 50%;
+    /* 50% de distância da esquerda até o texto */
+    transform: translate(-50%, -50%);
+    /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
 }
