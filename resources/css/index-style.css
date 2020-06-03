@@ -29,6 +29,12 @@ header {
 
 h1 {
     margin: 0;
+    color: #fff;
+    font-size: 240%; /* relativo ao font-size do html */
+    font-weight: 300; /* isso porque a formatação do h1 padrão vem em negrito */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
 }
 
 .hero-text-box {
