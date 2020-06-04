@@ -1,3 +1,8 @@
+/* 
+orange: #e67e22
+
+*/
+
 /*---------------------------------------------------*/
 /* BASIC SETUP */
 /*---------------------------------------------------*/
@@ -125,11 +130,9 @@ header {
     font-size: 90%; /* 18px divido por 20px do padrão que coloquei no html */
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s;
-    
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
-    
 }
