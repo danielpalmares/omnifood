@@ -1,3 +1,7 @@
+/*---------------------------------------------------*/
+/* BASIC SETUP */
+/*---------------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -13,26 +17,16 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+/*---------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*---------------------------------------------------*/
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
-    background-size: cover; /* para mostrar toda a imagem */
-    height: 100vh; /* 100% da viewport */
-    background-position: center;
-}
-
-.hero-text-box {
-    position: absolute;
-    width: 1140px; /* basicamente neste caso vai fazer o texto ficar em linha, no limite do tamanho da página */
-    top: 50%; /* posicionando como elemento absoluto, 50% de distância do topo até o texto */
-    left: 50%; /* 50% de distância da esquerda até o texto */
-    transform: translate(-50%, -50%); /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
-}
-
+/*---------- HEADINGS ----------*/
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
@@ -44,6 +38,7 @@ h1 {
     word-spacing: 4px;
 }
 
+/*---------- BUTTONS ----------*/
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -82,4 +77,59 @@ h1 {
 .btn-ghost:active {
     border: 1px solid #cf6d17;
     color: #fff;
+}
+
+/*---------------------------------------------------*/
+/* HEADER */
+/*---------------------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover; /* para mostrar toda a imagem */
+    height: 100vh; /* 100% da viewport */
+    background-position: center;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px; /* basicamente neste caso vai fazer o texto ficar em linha, no limite do tamanho da página */
+    top: 50%; /* posicionando como elemento absoluto, 50% de distância do topo até o texto */
+    left: 50%; /* 50% de distância da esquerda até o texto */
+    transform: translate(-50%, -50%); /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 90%; /* 18px divido por 20px do padrão que coloquei no html */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+    
 }
