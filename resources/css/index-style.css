@@ -194,3 +194,28 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+/*---------------------------------------------------*/
+/* MEALS */
+/*---------------------------------------------------*/
+
+.meals-showcase {
+    list-style: none;
+    width: 100%; /* toda a tela */
+}
+
+.meals-showcase li {
+    display: block;
+    width: 25%; /* são 4 li com 4 imagens ocupando 25% do elemento pai que tem 100% */
+    float: left;
+}
+
+.meal-photo {
+   width: 100%; /* a foto aparece inteira usando os 100% dos 25% do elemento pai */
+   margin: 0;
+}
+
+.meal-photo img {
+    width: 100%;
+    height: auto;
+}
