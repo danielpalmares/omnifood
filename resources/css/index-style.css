@@ -97,7 +97,6 @@ ion-icon {
     font-size: 350%;
     color: #e67e22;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 
@@ -196,8 +195,20 @@ header {
 }
 
 /*---------------------------------------------------*/
+/* FEATURES */
+/*---------------------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 40px;
+}
+
+/*---------------------------------------------------*/
 /* MEALS */
 /*---------------------------------------------------*/
+
+.section-meals {
+    padding: 0;
+}
 
 .meals-showcase {
     list-style: none;
@@ -213,9 +224,19 @@ header {
 .meal-photo {
    width: 100%; /* a foto aparece inteira usando os 100% dos 25% do elemento pai */
    margin: 0;
+   overflow: hidden;
+   background-color: #000;
 }
 
 .meal-photo img {
     width: 100%;
     height: auto;
+    transform: scale(1.15); /* zoom dado nas imagens */
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.7;
+}
+
+.meal-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
 }
