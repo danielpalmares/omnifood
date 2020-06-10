@@ -21,6 +21,15 @@ html {
     text-rendering: optimizeLegibility; /* usado para uma fonte mais legível */
 }
 
+.clearfix {zoom: 1} /* usado para limpar os floats */
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /*---------------------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*---------------------------------------------------*/
@@ -237,4 +246,55 @@ header {
 .meal-photo img:hover {
     transform: scale(1.03);
     opacity: 1;
+}
+
+/*---------------------------------------------------*/
+/* HOW IT WORKS */
+/*---------------------------------------------------*/
+
+.section-steps {
+    background-color: rgb(240, 240, 240);
+}
+
+.steps-box:first-child { /* pseudo-classe que seleciona o primeiro elemento filho */
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child { /* pseudo-classe que seleciona o último elemento filho */
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type { /* representa o último irmão com o nome do elemento dado na lista de filhos de seu elemento pai */
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    display: block;
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 3%;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
