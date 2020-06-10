@@ -1,6 +1,5 @@
 /* 
 orange: #e67e22
-
 */
 
 /*---------------------------------------------------*/
@@ -10,7 +9,7 @@ orange: #e67e22
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* usado para contar os tamanhos a partir da borda e não somar eles contando a partir do conteúdo (valor padrão que é content-box) */
 }
 
 html {
@@ -19,14 +18,14 @@ html {
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility; /* usado para uma fonte mais legível */
 }
 
 /*---------------------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*---------------------------------------------------*/
 
-.row {
+.row { /* para centralizar os elementos */
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -43,25 +42,25 @@ section {
 h1, 
 h2, 
 h3 {
-    font-weight: 300; /* isso porque a formatação do h1 padrão vem em negrito */
+    font-weight: 300; /* peso da fonte é usado porque a formatação padrão do h1 vem em negrito */
     text-transform: uppercase;
 }
 
 h1 {
     color: #fff;
     word-spacing: 4px;
+    letter-spacing: 1px;
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 240%; /* relativo ao font-size do html */
-    letter-spacing: 1px;
+    font-size: 240%; /* em % relativo ao font-size do html */
 }
 
 h2{
     font-size: 180%;
     margin-bottom: 30px;
     word-spacing: 2px;
-    text-align: center;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 h3 {
@@ -69,11 +68,11 @@ h3 {
     margin-bottom: 15px;
 }
 
-h2:after {
+h2::after { /* cria um pseudo-elemento que é o ultimo filho do elemento selecionado */
     display: block;
     height: 2px;
     background-color: #e67e22;
-    content: " ";
+    content: " "; /* é necessário definir um content para esse pseudo-elemento para que posssa ser exibido algo */
     width: 100px;
     margin: 0 auto;
     margin-top: 30px;
@@ -83,7 +82,7 @@ h2:after {
 .long-copy {
     line-height: 145%; /* distancia de uma linha para a outra de baixo */
     width: 70%;
-    margin-left: 15%;
+    margin-left: 15%; /* 30% restantes do width dividido por 2, assim centralizando o texto */
 }
 
 .box p {
@@ -98,7 +97,6 @@ ion-icon {
     color: #e67e22;
     margin-bottom: 20px;
 }
-
 
 /*---------- BUTTONS ----------*/
 .btn:link,
@@ -146,15 +144,15 @@ ion-icon {
 /*---------------------------------------------------*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* escurecendo a imagem */
     background-size: cover; /* para mostrar toda a imagem */
     height: 100vh; /* 100% da viewport */
     background-position: center;
 }
 
 .hero-text-box {
-    position: absolute;
-    width: 1140px; /* basicamente neste caso vai fazer o texto ficar em linha, no limite do tamanho da página */
+    position: absolute; /* pode ser posicionado em qualquer lugar */
+    width: 1140px; /* basicamente, neste caso, vai fazer o texto ficar em linha, no limite do tamanho da página */
     top: 50%; /* posicionando como elemento absoluto, 50% de distância do topo até o texto */
     left: 50%; /* 50% de distância da esquerda até o texto */
     transform: translate(-50%, -50%); /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
@@ -224,7 +222,7 @@ header {
 .meal-photo {
    width: 100%; /* a foto aparece inteira usando os 100% dos 25% do elemento pai */
    margin: 0;
-   overflow: hidden;
+   overflow: hidden; /* usado quando o conteúdo é maior que o container */
    background-color: #000;
 }
 
@@ -233,7 +231,7 @@ header {
     height: auto;
     transform: scale(1.15); /* zoom dado nas imagens */
     transition: transform 0.5s, opacity 0.5s;
-    opacity: 0.7;
+    opacity: 0.7; /* outra maneira de escurecer uma foto porém a opacidade depende do background do elemento pai */
 }
 
 .meal-photo img:hover {
