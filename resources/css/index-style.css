@@ -22,7 +22,7 @@ html {
 }
 
 .clearfix {zoom: 1} /* usado para limpar os floats */
-.clearfix:after {
+.clearfix::after {
     content: '.';
     clear: both;
     display: block;
@@ -140,7 +140,8 @@ a:active {
 
 /*---------- BUTTONS ----------*/
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     color: #fff;
@@ -151,7 +152,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #e67e22;
     border: 1px solid #e67e22;
     margin-right: 15px;
@@ -164,12 +166,15 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #cf6d17;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit] {
     border: 1px solid #cf6d17;
 }
 
@@ -187,7 +192,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* escurecendo a imagem */
     background-size: cover; /* para mostrar toda a imagem */
     background-attachment: fixed; /* usado para ter um efeito que deixa o background fixo */
-    height: 100vh; /* 100% da viewport */
+    height: 100vh; /* 100% da viewheight */
     background-position: center;
 }
 
@@ -412,7 +417,7 @@ cite img {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
-    box-shadow: 0 2px 2px #e6e6e6;
+    box-shadow: 0 2px 2px #e6e6e6; /* offset-x | offset-y | blur-radius | color */
 }
 
 .plan-box div {
@@ -454,3 +459,35 @@ cite img {
 .plan-box ul li {
     padding: 5px 0;
 }
+
+/*---------------------------------------------------*/
+/* SIGN UP */
+/*---------------------------------------------------*/
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline:none;
+}
+
