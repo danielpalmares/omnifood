@@ -11,7 +11,6 @@
 /* Small tablets to big tablets: from 768px to 1023px */
 @media only screen and (max-width:1023px) {
     body { font-size: 18px; }
-
     section { padding: 60px 0; }
 
     .long-copy {
@@ -19,6 +18,34 @@
         margin-left: 10%; 
     }
 
+    .app-screen { width: 50%; }
+
+    .steps-box:first-child { 
+        margin-top: 40px;
+        text-align: center;
+        padding-right: 0; 
+    }
+
+    .steps-box:last-child {
+        margin-top: 40px;
+        padding-left: 0;
+    }
+
+    .small-icon {
+        width: 20px;
+        margin-right: 2px;
+    }
+
+    .city-feature { font-size: 95%; }
+
+    .plan-box {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .plan-price { font-size: 250%; }
+    .contact-form { width: 80%; }
+    footer li { margin-right: 15px; }
 }    
 
 /* Big tablet to 1200px (widths smaller that the 1140px row) */
