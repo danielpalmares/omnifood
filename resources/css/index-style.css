@@ -12,13 +12,15 @@ orange: #e67e22
     box-sizing: border-box; /* usado para contar os tamanhos a partir da borda e não somar eles contando a partir do conteúdo (valor padrão que é content-box) */
 }
 
-html {
+html,
+body {
     background-color: #fff;
     color: rgb(119, 119, 119);
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility; /* usado para uma fonte mais legível */
+    overflow-x: hidden;
 }
 
 .clearfix {zoom: 1} /* usado para limpar os floats */

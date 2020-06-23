@@ -1,15 +1,20 @@
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width:480px) {
+/* Big tablet to 1200px (widths smaller that the 1140px row) */
+@media only screen and (max-width:1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 5%;
+    }
 
-}
+    .row { padding: 0 5%; }
 
-/* Small phones to small tablets: from 481px to 767px */
-@media only screen and (max-width:767px) {
-
+    nav .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /* Small tablets to big tablets: from 768px to 1023px */
-@media only screen and (max-width:1023px) {
+@media only screen and (max-width:1024px) {
     body { font-size: 18px; }
     section { padding: 60px 0; }
 
@@ -48,17 +53,45 @@
     footer li { margin-right: 15px; }
 }    
 
-/* Big tablet to 1200px (widths smaller that the 1140px row) */
-@media only screen and (max-width:1200px) {
-    .hero-text-box {
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width:767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+    .main-nav { display: none; }
+    .col { 
+        width: 100%; 
+        margin: 0 0 1% 0;
+    }
+
+    .row,
+    .hero-text-box { padding: 0 10%; }
+    
+    .long-copy {
         width: 100%;
-        padding: 0 5px;
+        margin-left: 0%; 
     }
 
-    .row { padding: 0 5px; }
+    h1 { font-size: 180%; }
+    h2 { font-size: 130%; }
 
-    nav .row {
-        margin-left: 0;
-        margin-right: 0;
+    .works-step div {
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+        font-size: 120%;
     }
+
+    .works-step { margin-bottom: 30px; }
+    .works-step:last-of-type { margin-bottom: 30px; }
+
+    .section-features .box {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width:480px) {
+    section { padding: 20px 0; }
+    .contact-form { width: 100%; }
 }
