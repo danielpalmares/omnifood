@@ -14,7 +14,7 @@
 }
 
 /* Small tablets to big tablets: from 768px to 1023px */
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1023px) {
     body { font-size: 18px; }
     section { padding: 60px 0; }
 
@@ -84,14 +84,38 @@
     .works-step { margin-bottom: 30px; }
     .works-step:last-of-type { margin-bottom: 30px; }
 
-    .section-features .box {
-        margin-bottom: 20px;
-    }
-
+    .section-features .box { margin-bottom: 20px; }
 }
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width:480px) {
     section { padding: 20px 0; }
     .contact-form { width: 100%; }
+    h1 { font-size: 170%; }
+    h2 { font-size: 120%; }
+
+    .row,
+    .hero-text-box { padding: 0 5%; }
+
+    .footer-nav { width: 100%; }
+    footer li { margin-right: 5px; }
+    footer .row { padding: 0; }
+
+    .footer-nav { width: 100%; }
+    .social-links {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer-nav ul {
+        width: 98%;
+        margin-left: 1%;
+        text-align: center;
+    }
+
+    .social-links ul {
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+    }
 }
