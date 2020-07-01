@@ -203,11 +203,20 @@ header {
     transform: translate(-50%, -50%); /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
 }
 
+/*---------- MAIN NAVI ----------*/
 .logo {
     height: 100px;
     width: auto;
     float: left;
     margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
 }
 
 .main-nav {
@@ -235,6 +244,31 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active { border-bottom: 2px solid #e67e22; }
+
+/*---------- STICKY NAVI ----------*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999; /* empilhamento vertical dos elementos, ficará sempre no topo de todos os elementos pois tem o maior valor possível */
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 18px 0;
+    color: #555; 
+}
+
+.sticky .main-nav { margin-top: 16px; }
+
+.sticky .logo { display: none; }
+.sticky .logo-black {
+    display: block;
+}
 
 /*---------------------------------------------------*/
 /* FEATURES */
