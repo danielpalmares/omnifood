@@ -61,4 +61,23 @@ $(document).ready(function () {
                 };
             };
         });
+
+    /* Mobile navi */
+
+
+    $('.js--nav-icon').click(function () {
+        var nav = $('.js--main-nav');
+        /* var icon = $('.js--nav-icon i'); */
+
+        nav.slideToggle(200);
+        /*
+        if(icon.hasClass('menu-outline')) {
+            icon.addName('close-outline');
+            icon.removeClass('menu-outline');
+        } else {
+            icon.addClass('menu-outline');
+            icon.removeClass('close-outline');
+        }
+        */
+    });
 });

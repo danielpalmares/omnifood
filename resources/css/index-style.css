@@ -1,10 +1,8 @@
-/* 
-orange: #e67e22
-*/
-
 /*---------------------------------------------------*/
 /* BASIC SETUP */
 /*---------------------------------------------------*/
+
+
 
 * {
     margin: 0;
@@ -36,6 +34,8 @@ body {
 /*---------------------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*---------------------------------------------------*/
+
+
 
 .row { /* para centralizar os elementos */
     max-width: 1140px;
@@ -185,6 +185,8 @@ input[type=submit] { border: 1px solid #cf6d17; }
 /* HEADER */
 /*---------------------------------------------------*/
 
+
+
 header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* escurecendo a imagem */
@@ -245,8 +247,20 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active { border-bottom: 2px solid #e67e22; }
 
-/*---------- STICKY NAVI ----------*/
+/*---------- MOBILE NAVI ----------*/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer; /* isso porque não especifiquei o href e o cursor não aparece como uma mão */
+    display: none;
+}
 
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+/*---------- STICKY NAVI ----------*/
 .sticky {
     position: fixed;
     top: 0;
@@ -274,11 +288,15 @@ header {
 /* FEATURES */
 /*---------------------------------------------------*/
 
+
+
 .section-features .long-copy { margin-bottom: 40px; }
 
 /*---------------------------------------------------*/
 /* MEALS */
 /*---------------------------------------------------*/
+
+
 
 .section-meals { padding: 0; }
 
@@ -321,6 +339,8 @@ header {
 /*---------------------------------------------------*/
 /* HOW IT WORKS */
 /*---------------------------------------------------*/
+
+
 
 .section-steps { background-color: #f4f4f4; }
 
@@ -368,6 +388,8 @@ header {
 /* CITIES */
 /*---------------------------------------------------*/
 
+
+
 .box img {
     width: 100%;
     height: auto;
@@ -383,6 +405,8 @@ header {
 /*---------------------------------------------------*/
 /* TESTIMONIALS */
 /*---------------------------------------------------*/
+
+
 
 .section-testimonials {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
@@ -425,6 +449,8 @@ cite img {
 /*---------------------------------------------------*/
 /* SIGN UP */
 /*---------------------------------------------------*/
+
+
 
 .section-plans {
     background-color: #f4f4f4;
@@ -477,6 +503,8 @@ cite img {
 /* SIGN UP */
 /*---------------------------------------------------*/
 
+
+
 .contact-form {
     width: 60%;
     margin: 0 auto;
@@ -497,6 +525,8 @@ textarea { height: 100px; }
 input[type=checkbox] { margin: 10px 5px 10px 0; }
 
 *:focus { outline:none; }
+
+
 
 /*---------------------------------------------------*/
 /* FOOTER */
