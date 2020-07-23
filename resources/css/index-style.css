@@ -591,3 +591,25 @@ footer p {
     color: #888;
     margin-top: 20px;
 }
+
+/*---------------------------------------------------*/
+/* FORM */
+/*---------------------------------------------------*/
+
+.form-messages {
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.success {
+    background-color: rgba(46, 209, 46, 0.8);
+}
+
+.error {
+    background-color: rgba(209, 46, 46, 0.8);
+}

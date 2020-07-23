@@ -367,8 +367,22 @@
         <div class="row">
             <h2>We're happy to hear from you</h2>
         </div>
+
         <div class="row">
-            <form method="POST" action="#" class="contact-form">
+            <form method="POST" action="mailer-new.php" class="contact-form">
+
+                <div class="row">
+                    <?php
+                        if($_GET['success'] == 1) {
+                            echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>"
+                        }
+
+                        if($_GET['success'] == -1) {
+                            echo "<div class=\"form-messages error\">Oops! Something went wrong. Please try again!</div>"
+                        }
+                    ?>
+                </div>
+
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label for="name">Name:</label>
