@@ -47,7 +47,9 @@ Besides that, it is a good idea to have a nice text editor like [VSCode](https:/
 
 ## Instructions
 
-Just open the project folder, and then open the index.html file with Live Server
+Clone this repository [Omnifood](https://github.com/danielpalmares/omnifood)
+
+Just open the project folder with VSCode, and then open the index.html file with Live Server
 
 If you don't have the Live Server extension installed, this link is for you [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
