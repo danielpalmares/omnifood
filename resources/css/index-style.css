@@ -2,594 +2,660 @@
 /* BASIC SETUP */
 /*---------------------------------------------------*/
 
-
-
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; /* usado para contar os tamanhos a partir da borda e não somar eles contando a partir do conteúdo (valor padrão que é content-box) */
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; /* usado para contar os tamanhos a partir da borda e não somar eles contando a partir do conteúdo (valor padrão que é content-box) */
 }
 
 html,
 body {
-    background-color: #fff;
-    color: rgb(119, 119, 119);
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    text-rendering: optimizeLegibility; /* usado para uma fonte mais legível */
-    overflow-x: hidden;
+  background-color: #fff;
+  color: rgb(119, 119, 119);
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility; /* usado para uma fonte mais legível */
+  overflow-x: hidden;
 }
 
-.clearfix {zoom: 1} /* usado para limpar os floats */
+.clearfix {
+  zoom: 1;
+} /* usado para limpar os floats */
 .clearfix::after {
-    content: '.';
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 /*---------------------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*---------------------------------------------------*/
 
-
-
-.row { /* para centralizar os elementos */
-    max-width: 1140px;
-    margin: 0 auto;
+.row {
+  /* para centralizar os elementos */
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
-section { padding: 80px 0; }
+section {
+  padding: 80px 0;
+}
 
-.box { padding: 1px; }
+.box {
+  padding: 1px;
+}
 
 /*---------- HEADINGS ----------*/
-h1, 
-h2, 
+h1,
+h2,
 h3 {
-    font-weight: 300; /* peso da fonte é usado porque a formatação padrão do h1 vem em negrito */
-    text-transform: uppercase;
+  font-weight: 300; /* peso da fonte é usado porque a formatação padrão do h1 vem em negrito */
+  text-transform: uppercase;
 }
 
 h1 {
-    color: #fff;
-    word-spacing: 4px;
-    letter-spacing: 1px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 240%; /* em % relativo ao font-size do html */
+  color: #fff;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 240%; /* em % relativo ao font-size do html */
 }
 
-h2{
-    font-size: 180%;
-    margin-bottom: 30px;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-align: center;
+h2 {
+  font-size: 180%;
+  margin-bottom: 30px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
+  font-size: 110%;
+  margin-bottom: 15px;
 }
 
-h2::after { /* cria um pseudo-elemento que é o ultimo filho do elemento selecionado */
-    display: block;
-    height: 2px;
-    background-color: #e67e22;
-    content: " "; /* é necessário definir um content para esse pseudo-elemento para que posssa ser exibido algo */
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
+h2::after {
+  /* cria um pseudo-elemento que é o ultimo filho do elemento selecionado */
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: ' '; /* é necessário definir um content para esse pseudo-elemento para que posssa ser exibido algo */
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 /*---------- PARAGRAPHS ----------*/
 .long-copy {
-    line-height: 145%; /* distancia de uma linha para a outra de baixo */
-    width: 70%;
-    margin-left: 15%; /* 30% restantes do width dividido por 2, assim centralizando o texto */
+  line-height: 145%; /* distancia de uma linha para a outra de baixo */
+  width: 70%;
+  margin-left: 15%; /* 30% restantes do width dividido por 2, assim centralizando o texto */
 }
 
 .box p {
-    font-size: 90%;
-    line-height: 145%;
+  font-size: 90%;
+  line-height: 145%;
 }
 
 /*---------- ICONS ----------*/
 .big-icon {
-    display: block;
-    font-size: 350%;
-    color: #e67e22;
-    margin-bottom: 20px;
+  display: block;
+  font-size: 350%;
+  color: #e67e22;
+  margin-bottom: 20px;
 }
 
 .small-icon {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-    font-size: 120%;
-    color: #e67e22;
-    margin-right: 10px;
-    
-    /* secret to align text and icons */
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top: -5px;
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-size: 120%;
+  color: #e67e22;
+  margin-right: 10px;
+
+  /* secret to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
 }
 
 /*---------- LINKS ----------*/
 a:link,
 a:visited {
-    text-decoration: none;
-    color: #e67e22;
-    padding-bottom: 1px;
-    border-bottom: 1px solid #e67e22;
-    -webkit-transition: border-bottom 0.2s, color 0.2s;
-    transition: border-bottom 0.2s, color 0.2s;
+  text-decoration: none;
+  color: #e67e22;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
 }
 
 a:hover,
 a:active {
-    text-decoration: none;
-    color: rgb(119, 119, 119);
-    border-bottom: 1px solid transparent;
+  text-decoration: none;
+  color: rgb(119, 119, 119);
+  border-bottom: 1px solid transparent;
 }
 
 /*---------- BUTTONS ----------*/
 .btn:link,
 .btn:visited,
-input[type=submit] {
-    display: inline-block;
-    padding: 10px 30px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 200px;
-    font-weight: 300; /* peso da fonte */
-    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    transition: background-color 0.2s, border 0.2s, color 0.2s; /* transição de cores, bordas e texto */
+input[type='submit'] {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 200px;
+  font-weight: 300; /* peso da fonte */
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s; /* transição de cores, bordas e texto */
 }
 
 .btn-full:link,
 .btn-full:visited,
-input[type=submit] {
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
-    margin-right: 15px;
+input[type='submit'] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #e67e22;
-    color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #e67e22;
 }
 
 .btn:hover,
 .btn:active,
-input[type=submit]:hover,
-input[type=submit]:active { background-color: #cf6d17; }
+input[type='submit']:hover,
+input[type='submit']:active {
+  background-color: #cf6d17;
+}
 
 .btn-full:hover,
 .btn-full:active,
-input[type=submit] { border: 1px solid #cf6d17; }
+input[type='submit'] {
+  border: 1px solid #cf6d17;
+}
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #cf6d17;
-    color: #fff;
+  border: 1px solid #cf6d17;
+  color: #fff;
 }
 
 /*---------------------------------------------------*/
 /* HEADER */
 /*---------------------------------------------------*/
 
-
-
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* escurecendo a imagem */
-    background-size: cover; /* para mostrar toda a imagem */
-    background-attachment: fixed; /* usado para ter um efeito que deixa o background fixo */
-    height: 100vh; /* 100% da viewheight */
-    background-position: center;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(img/hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/hero.jpg); /* escurecendo a imagem */
+  background-size: cover; /* para mostrar toda a imagem */
+  background-attachment: fixed; /* usado para ter um efeito que deixa o background fixo */
+  height: 100vh; /* 100% da viewheight */
+  background-position: center;
 }
 
 .hero-text-box {
-    position: absolute; /* pode ser posicionado em qualquer lugar */
-    width: 1140px; /* basicamente, neste caso, vai fazer o texto ficar em linha, no limite do tamanho da página */
-    top: 50%; /* posicionando como elemento absoluto, 50% de distância do topo até o texto */
-    left: 50%; /* 50% de distância da esquerda até o texto */
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
+  position: absolute; /* pode ser posicionado em qualquer lugar */
+  width: 1140px; /* basicamente, neste caso, vai fazer o texto ficar em linha, no limite do tamanho da página */
+  top: 50%; /* posicionando como elemento absoluto, 50% de distância do topo até o texto */
+  left: 50%; /* 50% de distância da esquerda até o texto */
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(
+    -50%,
+    -50%
+  ); /* truque para centralizar o centro do elemento com o centro do elemento pai, translate(x,y) */
 }
 
 /*---------- MAIN NAVI ----------*/
 .logo {
-    height: 100px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
 }
 
 .logo-black {
-    display: none;
-    height: 50px;
-    width: auto;
-    float: left;
-    margin: 5px 0;
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
 }
 
 .main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 55px;
+  float: right;
+  list-style: none;
+  margin-top: 55px;
 }
 
 .main-nav li {
-    display: inline-block;
-    margin-left: 40px;
+  display: inline-block;
+  margin-left: 40px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    padding: 8px 0;
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 90%; /* 18px divido por 20px do padrão que coloquei no html */
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bottom 0.2s;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 90%; /* 18px divido por 20px do padrão que coloquei no html */
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
-.main-nav li a:active { border-bottom: 2px solid #e67e22; }
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
 
 /*---------- MOBILE NAVI ----------*/
 .mobile-nav-icon {
-    float: right;
-    margin-top: 30px;
-    cursor: pointer; /* isso porque não especifiquei o href e o cursor não aparece como uma mão */
-    display: none;
+  float: right;
+  margin-top: 30px;
+  cursor: pointer; /* isso porque não especifiquei o href e o cursor não aparece como uma mão */
+  display: none;
 }
 
 .mobile-nav-icon ion-icon {
-    font-size: 200%;
-    color: #fff;
+  font-size: 200%;
+  color: #fff;
 }
 
 /*---------- STICKY NAVI ----------*/
 .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 2px #efefef;
-    z-index: 9999; /* empilhamento vertical dos elementos, ficará sempre no topo de todos os elementos pois tem o maior valor possível */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999; /* empilhamento vertical dos elementos, ficará sempre no topo de todos os elementos pois tem o maior valor possível */
 }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-    padding: 18px 0;
-    color: #555; 
+  padding: 18px 0;
+  color: #555;
 }
 
-.sticky .main-nav { margin-top: 16px; }
+.sticky .main-nav {
+  margin-top: 16px;
+}
 
-.sticky .logo { display: none; }
+.sticky .logo {
+  display: none;
+}
 .sticky .logo-black {
-    display: block;
+  display: block;
 }
 
 /*---------------------------------------------------*/
 /* FEATURES */
 /*---------------------------------------------------*/
 
-
-
-.section-features .long-copy { margin-bottom: 40px; }
+.section-features .long-copy {
+  margin-bottom: 40px;
+}
 
 /*---------------------------------------------------*/
 /* MEALS */
 /*---------------------------------------------------*/
 
-
-
-.section-meals { padding: 0; }
+.section-meals {
+  padding: 0;
+}
 
 .meals-showcase {
-    list-style: none;
-    width: 100%; /* toda a tela */
+  list-style: none;
+  width: 100%; /* toda a tela */
 }
 
 .meals-showcase li {
-    display: block;
-    width: 25%; /* são 4 li com 4 imagens ocupando 25% do elemento pai que tem 100% */
-    float: left;
+  display: block;
+  width: 25%; /* são 4 li com 4 imagens ocupando 25% do elemento pai que tem 100% */
+  float: left;
 }
 
 .meal-photo {
-   width: 100%; /* a foto aparece inteira usando os 100% dos 25% do elemento pai */
-   margin: 0;
-   overflow: hidden; /* usado quando o conteúdo é maior que o container */
-   background-color: #000;
+  width: 100%; /* a foto aparece inteira usando os 100% dos 25% do elemento pai */
+  margin: 0;
+  overflow: hidden; /* usado quando o conteúdo é maior que o container */
+  background-color: #000;
 }
 
 .meal-photo img {
-    width: 100%;
-    height: auto;
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15); /* zoom dado nas imagens */
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
-    opacity: 0.7; /* outra maneira de escurecer uma foto porém a opacidade depende do background do elemento pai */
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15); /* zoom dado nas imagens */
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  opacity: 0.7; /* outra maneira de escurecer uma foto porém a opacidade depende do background do elemento pai */
 }
 
 .meal-photo img:hover {
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-    opacity: 1;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  opacity: 1;
 }
 
 /*---------------------------------------------------*/
 /* HOW IT WORKS */
 /*---------------------------------------------------*/
 
-
-
-.section-steps { background-color: #f4f4f4; }
-
-.steps-box:first-child { /* pseudo-classe que seleciona o primeiro elemento filho */
-    text-align: right;
-    padding-right: 3%;
-    margin-top: 30px;
+.section-steps {
+  background-color: #f4f4f4;
 }
 
-.steps-box:last-child { /* pseudo-classe que seleciona o último elemento filho */
-    padding-left: 3%;
-    margin-top: 70px;
+.steps-box:first-child {
+  /* pseudo-classe que seleciona o primeiro elemento filho */
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
 }
 
-.app-screen { width: 40%; }
+.steps-box:last-child {
+  /* pseudo-classe que seleciona o último elemento filho */
+  padding-left: 3%;
+  margin-top: 70px;
+}
 
-.works-step { margin-bottom: 50px; }
+.app-screen {
+  width: 40%;
+}
 
-.works-step:last-of-type { margin-bottom: 80px; } /* representa o último irmão com o nome do elemento dado na lista de filhos de seu elemento pai */
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+} /* representa o último irmão com o nome do elemento dado na lista de filhos de seu elemento pai */
 
 .works-step div {
-    display: block;
-    color: #e67e22;
-    border: 2px solid #e67e22;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    text-align: center;
-    padding: 5px;
-    float: left;
-    font-size: 150%;
-    margin-right: 3%;
+  display: block;
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 3%;
 }
 
 .btn-app:link,
-.btn-app:visited { border-bottom: none; }
+.btn-app:visited {
+  border-bottom: none;
+}
 
 .btn-app img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
 }
 
 /*---------------------------------------------------*/
 /* CITIES */
 /*---------------------------------------------------*/
 
-
-
 .box img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-.city-feature { margin-bottom: 10px; }
+.city-feature {
+  margin-bottom: 10px;
+}
 
-.cities-info { margin-top: 30px; }
+.cities-info {
+  margin-top: 30px;
+}
 
-.cities-content { margin-top: 30px; }
+.cities-content {
+  margin-top: 30px;
+}
 
 /*---------------------------------------------------*/
 /* TESTIMONIALS */
 /*---------------------------------------------------*/
 
-
-
 .section-testimonials {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
-    background-size: cover;
-    background-attachment: fixed; /* usado para ter um efeito que deixa o background fixo */
-    color: #fff;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    url(img/back-customers.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/back-customers.jpg);
+  background-size: cover;
+  background-attachment: fixed; /* usado para ter um efeito que deixa o background fixo */
+  color: #fff;
 }
 
 blockquote {
-    font-style: italic;
-    line-height: 145%;
-    padding: 2px;
-    position: relative;
-    margin-top: 40px;
+  font-style: italic;
+  line-height: 145%;
+  padding: 2px;
+  position: relative;
+  margin-top: 40px;
 }
 
 blockquote::before {
-    content: "\201C";
-    font-size: 500%;
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -5px;
+  content: '\201C';
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
 }
 
 cite {
-    font-size: 90%;
-    display: block;
-    margin-top: 25px;
+  font-size: 90%;
+  display: block;
+  margin-top: 25px;
 }
 
 cite img {
-    border-radius: 50%;
-    height: 50px;
-    margin-right: 10px;
-    vertical-align: middle;
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 /*---------------------------------------------------*/
 /* SIGN UP */
 /*---------------------------------------------------*/
 
-
-
 .section-plans {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 .plan-box {
-    background-color: #fff;
-    border-radius: 5px;
-    width: 90%;
-    margin-left: 5%;
-    -webkit-box-shadow: 0 2px 2px #e6e6e6;
-    box-shadow: 0 2px 2px #e6e6e6; /* offset-x | offset-y | blur-radius | color */
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  -webkit-box-shadow: 0 2px 2px #e6e6e6;
+  box-shadow: 0 2px 2px #e6e6e6; /* offset-x | offset-y | blur-radius | color */
 }
 
 .plan-box div {
-    padding: 15px;
-    border-bottom: 1px solid rgb(230, 230, 230);
+  padding: 15px;
+  border-bottom: 1px solid rgb(230, 230, 230);
 }
 
 .plan-box div:first-child {
-    background-color: #fcfcfc;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .plan-box div:last-child {
-    text-align: center;
-    border: 0;
+  text-align: center;
+  border: 0;
 }
 
 .plan-price {
-    font-size: 300%;
-    color: #e67e22;
-    font-weight: 100;
-    margin-bottom: 10px;
+  font-size: 300%;
+  color: #e67e22;
+  font-weight: 100;
+  margin-bottom: 10px;
 }
 
 .plan-price span {
-    font-size: 30%;
-    font-weight: 300;
+  font-size: 30%;
+  font-weight: 300;
 }
 
-.plan-price-meal { font-size: 80%; }
+.plan-price-meal {
+  font-size: 80%;
+}
 
-.plan-box ul { list-style: none; }
+.plan-box ul {
+  list-style: none;
+}
 
-.plan-box ul li { padding: 5px 0; }
+.plan-box ul li {
+  padding: 5px 0;
+}
 
 /*---------------------------------------------------*/
 /* SIGN UP */
 /*---------------------------------------------------*/
 
-
-
 .contact-form {
-    width: 60%;
-    margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
 }
 
-input[type=text],
-input[type=email],
+input[type='text'],
+input[type='email'],
 select,
 textarea {
-    width: 100%;
-    padding: 7px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-textarea { height: 100px; }
+textarea {
+  height: 100px;
+}
 
-input[type=checkbox] { margin: 10px 5px 10px 0; }
+input[type='checkbox'] {
+  margin: 10px 5px 10px 0;
+}
 
-*:focus { outline:none; }
-
-
+*:focus {
+  outline: none;
+}
 
 /*---------------------------------------------------*/
 /* FOOTER */
 /*---------------------------------------------------*/
 
 footer {
-    background-color: #333;
-    padding: 50px;
-    font-size: 80%;
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
 }
 
 .footer-nav {
-    list-style: none;
-    float: left;
+  list-style: none;
+  float: left;
 }
 
 .social-links {
-    list-style: none;
-    float: right;
+  list-style: none;
+  float: right;
 }
 
 footer li {
-    display: inline-block;
-    margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .footer-nav li:last-child,
-.social-links li:last-child { margin-right: 0; }
+.social-links li:last-child {
+  margin-right: 0;
+}
 
 .footer-nav li a:link,
 .social-links li a:link,
-.footer-nav li a:visited, 
+.footer-nav li a:visited,
 .social-links li a:visited {
-    text-decoration: none;
-    border: none;
-    color: #888;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
+  text-decoration: none;
+  border: none;
+  color: #888;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .footer-nav li a:hover,
-.footer-nav li a:active { color: #ddd; }
+.footer-nav li a:active {
+  color: #ddd;
+}
 
 .social-links a:link,
-.social-links a:visited { font-size: 160%; }
+.social-links a:visited {
+  font-size: 160%;
+}
 
 .logo-facebook,
 .logo-twitter,
 .logo-google,
-.logo-insta { -webkit-transition: color 0.2s; transition: color 0.2s; }
+.logo-insta {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
 
-.logo-facebook:hover { color: #3b5998; }
+.logo-facebook:hover {
+  color: #3b5998;
+}
 
-.logo-twitter:hover { color: #00aced; }
+.logo-twitter:hover {
+  color: #00aced;
+}
 
-.logo-google:hover { color: #dd4b39; }
+.logo-google:hover {
+  color: #dd4b39;
+}
 
-.logo-insta:hover { color: #517fa4; }
+.logo-insta:hover {
+  color: #517fa4;
+}
 
 footer p {
-    text-align: center;
-    color: #888;
-    margin-top: 20px;
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
 }
 
 /*---------------------------------------------------*/
@@ -597,19 +663,19 @@ footer p {
 /*---------------------------------------------------*/
 
 .form-messages {
-    width: 70%;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+  width: 70%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .success {
-    background-color: rgba(46, 209, 46, 0.8);
+  background-color: rgba(46, 209, 46, 0.8);
 }
 
 .error {
-    background-color: rgba(209, 46, 46, 0.8);
+  background-color: rgba(209, 46, 46, 0.8);
 }
