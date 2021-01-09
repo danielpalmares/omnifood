@@ -1,10 +1,3 @@
-
-
-This website was created with **HTML, CSS, JS**. 
-Basically just html and css, those js scripts you can find on internet.
-
-You may check it out here :point_right: [project-killer](https://project-killer-dann.netlify.app/)
-
 <h1 align="center">
     <img alt="Omnifood" title="Omnifood" src="https://github.com/danielpalmares/project-killer/blob/master/resources/img/logo-white.png" />
 </h1>
