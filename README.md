@@ -19,7 +19,7 @@
 
 <p align="center">
   <a href="https://dann-omnifood.netlify.app/" target="_blank">
-    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
+    <img alt="Demo on Netlify" src="https://github.com/danielpalmares/omnifood/blob/master/.github/demo-on-netlify.png">
   </a>
 </p>
 
@@ -40,7 +40,7 @@
 
 ## Status
 
-Project completely done! :boom:
+Project completely done! ☄️
 
 ## Pre-requirements
 
