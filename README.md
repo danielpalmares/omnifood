@@ -1,9 +1,8 @@
 <h1 align="center">
-    <img alt="Omnifood" title="Omnifood" src="https://github.com/danielpalmares/omnifood/blob/master/resources/img/logo-white.png" />
+  <img alt="Omnifood" title="Omnifood" src="https://github.com/danielpalmares/omnifood/blob/master/resources/img/logo-white.png" />
 </h1>
 
 <p align="center">
-  <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#status">Status</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#pre-requirements">Pre-requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -12,11 +11,17 @@
   <a href="#license">License</a>
 </p>
 
-## About
+---
 
-Omnifood is a really nice delivery page which allows you to find lots of different dishes :smile:
+<p align="center">
+  Omnifood is a really nice delivery page which allows you to find lots of different dishes 
+</p>
 
-You can check it out here :point_right: [Omnifood](https://dann-omnifood.netlify.app/)
+<p align="center">
+  <a href="https://dann-omnifood.netlify.app/" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
+  </a>
+</p>
 
 ---
 
