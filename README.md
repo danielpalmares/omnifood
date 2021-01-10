@@ -14,7 +14,7 @@
 ---
 
 <p align="center">
-  Omnifood is a really nice delivery page which allows you to find lots of different dishes 
+  Omnifood is a really nice delivery page which allows you to find lots of different dishes 🥕 
 </p>
 
 <p align="center">
