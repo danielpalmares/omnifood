@@ -46,7 +46,7 @@ Project completely done! ☄️
 
 Before getting started, you will need to have installed in your machine these tools: 
 
-[Git](https://git-scm.com)
+- [Git](https://git-scm.com)
 
 Besides that, it is a good idea to have a nice text editor like [VSCode](https://code.visualstudio.com/)
 
