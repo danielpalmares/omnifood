@@ -47,9 +47,17 @@ Besides that, it is a good idea to have a nice text editor like [VSCode](https:/
 
 ## Instructions
 
-Clone this repository [Omnifood](https://github.com/danielpalmares/omnifood)
+```bash
+# Open the cmd/terminal and clone this repository
+$ git clone <https://github.com/danielpalmares/omnifood>
 
-Just open the project folder with VSCode, and then open the index.html file with Live Server
+# Go to the project folder
+$ cd omnifood
+
+# Open the index file with Live Server
+
+# Running on port:3000
+```
 
 If you don't have the Live Server extension installed, this link is for you [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
