@@ -28,13 +28,8 @@
 ## Screenshots
 
 ![Header](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-1.PNG)
-![Get food fast section](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-2.png)
-![Images](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-3.png)
-![How it works](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-4.png)
-![Cities](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-5.png)
-![Customers](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-6.png)
-![Get started](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-7.png)
-![Sign up](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-8.png)
+
+You can see more screenshots over here 👉 [Drive](https://drive.google.com/drive/folders/1E-djtJQFuz047DHJOQ3JTGK1Ep2JpD_q?usp=sharing)
 
 ---
 
