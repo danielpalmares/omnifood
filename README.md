@@ -10,7 +10,7 @@
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
 </p>
-
+ 
 ---
 
 <p align="center">
@@ -27,9 +27,7 @@
 
 ## Screenshots
 
-![Header](https://github.com/danielpalmares/omnifood/blob/master/.github/omnifood-1.PNG)
-
-You can see more screenshots over here 👉 [Drive](https://drive.google.com/drive/folders/1E-djtJQFuz047DHJOQ3JTGK1Ep2JpD_q?usp=sharing)
+![Layout](https://github.com/danielpalmares/omnifood/blob/master/.github/layout.PNG)
 
 ---
 
@@ -39,11 +37,11 @@ Project completely done! ☄️
 
 ## Pre-requirements
 
-Before getting started, you will need to have installed in your machine these tools: 
+Before getting started, you'll need to have installed in your machine these tools:
 
 - [Git](https://git-scm.com)
 
-Besides that, it is a good idea to have a nice text editor like [VSCode](https://code.visualstudio.com/)
+Besides that, it's a good idea to have a nice text editor like [VSCode](https://code.visualstudio.com/)
 
 ## Instructions
 
@@ -57,7 +55,7 @@ $ cd omnifood
 # Open the index file with Live Server!
 ```
 
-If you don't have the Live Server extension installed, this link is for you [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+If you don't have the Live Server extension installed, go to [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ## Technologies
 
