@@ -1,4 +1,4 @@
-/* Big tablet to 1200px (widths smaller that the 1140px row) */
+/* Big tablet to 1200px */
 @media only screen and (max-width: 1200px) {
   .hero-text-box {
     width: 100%;
@@ -15,7 +15,7 @@
   }
 }
 
-/* Small tablets to big tablets: from 768px to 1023px */
+/* Small tablets to big tablets: 768px to 1023px */
 @media only screen and (max-width: 1023px) {
   body {
     font-size: 18px;
@@ -33,15 +33,17 @@
     width: 50%;
   }
 
-  .steps-box:first-child {
-    margin-top: 40px;
-    text-align: center;
-    padding-right: 0;
+  .why-card {
+    flex-direction: column;
   }
 
-  .steps-box:last-child {
-    margin-top: 40px;
-    padding-left: 0;
+  .why-card-img {
+    width: 100%;
+    height: 260px;
+  }
+
+  .why-card-content {
+    padding: 32px 28px;
   }
 
   .small-icon {
@@ -50,7 +52,7 @@
   }
 
   .city-feature {
-    font-size: 95%;
+    font-size: 90%;
   }
 
   .plan-box {
@@ -61,33 +63,41 @@
   .plan-price {
     font-size: 250%;
   }
+
   .contact-form {
     width: 80%;
   }
+
   footer li {
     margin-right: 15px;
   }
+
+  /* Gallery: 2 rows of 2 on tablet */
+  .meal-photo {
+    height: 220px;
+  }
 }
 
-/* Small phones to small tablets: from 481px to 767px */
+/* Small phones to small tablets: 481px to 767px */
 @media only screen and (max-width: 767px) {
   body {
     font-size: 16px;
   }
+
   section {
-    padding: 30px 0;
-  }
-  .main-nav {
-    display: none;
-  }
-  .mobile-nav-icon {
-    display: inline-block;
+    padding: 48px 0;
   }
 
+  /* Mobile nav */
   .main-nav {
+    display: none;
     float: left;
     margin-top: 25px;
     margin-left: 10px;
+  }
+
+  .mobile-nav-icon {
+    display: inline-block;
   }
 
   .main-nav li {
@@ -110,26 +120,29 @@
   .sticky .main-nav {
     margin-top: 10px;
   }
+
   .sticky .mobile-nav-icon ion-icon {
-    color: #555;
+    color: #ccc;
   }
+
   .sticky .mobile-nav-icon {
     margin-top: 10px;
   }
 
+  /* Grid goes full width */
   .col {
     width: 100%;
-    margin: 0 0 1% 0;
+    margin: 0;
   }
 
   .row,
   .hero-text-box {
-    padding: 0 10%;
+    padding: 0 6%;
   }
 
   .long-copy {
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
   }
 
   h1 {
@@ -139,6 +152,7 @@
     font-size: 130%;
   }
 
+  /* Steps */
   .works-step div {
     width: 35px;
     height: 35px;
@@ -153,21 +167,74 @@
     margin-bottom: 30px;
   }
 
+  /* Feature boxes */
   .section-features .box {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
-}
 
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px) {
-  section {
-    padding: 20px 0;
+  /* Gallery */
+  .meals-showcase li {
+    width: 50%;
   }
+
+  .meal-photo {
+    height: 180px;
+  }
+
+  /* Location cards: stack with gap */
+  .cities-content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cities-content > .col {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .location-box {
+    padding: 22px 18px;
+  }
+
+  /* Plan boxes */
+  .plan-featured {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-bottom: 16px;
+  }
+
+  .plan-featured:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  .section-plans .col {
+    margin-bottom: 16px;
+  }
+
+  .section-plans .col:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Contact form */
   .contact-form {
     width: 100%;
   }
+
+  .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Small phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 36px 0;
+  }
+
   h1 {
-    font-size: 170%;
+    font-size: 160%;
   }
   h2 {
     font-size: 120%;
@@ -178,33 +245,44 @@
     padding: 0 5%;
   }
 
-  .footer-nav {
+  .contact-form {
     width: 100%;
-  }
-  footer li {
-    margin-right: 5px;
-  }
-  footer .row {
-    padding: 0;
   }
 
+  /* Gallery: 1 per row on small phones */
+  .meals-showcase li {
+    width: 50%;
+  }
+
+  .meal-photo {
+    height: 160px;
+  }
+
+  /* Footer */
   .footer-nav {
     width: 100%;
+    float: none;
   }
+
   .social-links {
     width: 100%;
+    float: none;
     margin-top: 20px;
   }
 
+  footer li {
+    margin-right: 5px;
+  }
+
+  footer .row {
+    padding: 0 5%;
+  }
+
   .footer-nav ul {
-    width: 98%;
-    margin-left: 1%;
     text-align: center;
   }
 
   .social-links ul {
-    width: 80%;
-    margin-left: 10%;
     text-align: center;
   }
 }
